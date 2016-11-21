@@ -14,10 +14,14 @@ $(document).ready( function() {
 
 
   $("body").keydown(function(event) {
-    var className = "note " + event.key;
+    var buttonSelector = "button." + event.key;
     audio = getAudio(event.key);
+    $(buttonSelector).addClass('active');
     audio.load();
     audio.play();
+    setTimeout(function() {
+      $(buttonSelector).removeClass('active');}, 20
+    );
   });
 
 });
