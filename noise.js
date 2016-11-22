@@ -6,8 +6,9 @@ $(document).ready( function() {
   });
 
   var getAudio = function(note) {
-    var id = note + ('Audio');
-    var audio = document.getElementById(id);
+    // var id = note + ('Audio');
+    // var audio = document.getElementById(id);
+    var audio = $("#" + note + "Audio")[0];
 
     return audio;
   };
